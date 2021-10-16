@@ -18,7 +18,7 @@
 
 
 ## Abstract:
-        We will be balancing bot on 2 wheels. Relate this to human responses. When we fall ahead, we move ahead. When we fall behind, we move behind. Falling 
+   We will be balancing bot on 2 wheels. Relate this to human responses. When we fall ahead, we move ahead. When we fall behind, we move behind. We will measure angle of inclination with horizontal axis using Accelerometer. Take tanh of ratio of 
     
 ## Tests:
 https://youtu.be/09PRFaCYIq0
