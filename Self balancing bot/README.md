@@ -1,3 +1,7 @@
+## Abstract:
+   We will be balancing bot on 2 wheels. Relate this to human responses. When we fall ahead, we move ahead. When we fall behind, we move behind. We will measure angle of inclination with horizontal axis using Accelerometer. Take tanh of ratio of acceleration in x and z direction. This will be input of our system. We will use PID controller to produce output that is rotational torque. Motors will rotate accordingly and bot wont fall. If tunning done properly, motors will rotate so precisely that bot will resemble to be balanced. PWM helps us to manage speed of motor. So, output of PID controller will be width of pulse. If given 100, motor runs at max speed. If given below 40, motor stops(basically due to voltage wont be sufficient enough to drive motor). 
+
+
 ## Requirements:
 1) Raspberrypi4B\
 ![](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/RPi.png)
@@ -17,8 +21,7 @@
 (dont stick by 2sided tape. it is very feebly)
 
 
-## Abstract:
-   We will be balancing bot on 2 wheels. Relate this to human responses. When we fall ahead, we move ahead. When we fall behind, we move behind. We will measure angle of inclination with horizontal axis using Accelerometer. Take tanh of ratio of acceleration in x and z direction. This will be input of our system. We will use PID controller to produce output that is rotational torque. Motors will rotate accordingly and bot wont fall. If tunning done properly, motors will rotate so precisely that bot will resemble to be balanced. PWM helps us to manage speed of motor. So, output of PID controller will be width of pulse. If given 100, motor runs at max speed. If given below 40, motor stops(basically due to voltage wont be sufficient enough to drive motor). 
+
    
 ## PID Controller and ADXL345:
    P = Proportional\
