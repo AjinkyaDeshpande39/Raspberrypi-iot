@@ -17,11 +17,11 @@ pwm_B = 0
 pwm_D = 0
 
 ref = 0
-T = 0.05
+T = 0.001
 
-kp = 30
-kd = 0.8
-ki = 0
+kp = 1300
+kd = 0.9
+ki = 300
 
 
 def motorStop():
@@ -76,44 +76,52 @@ def destroy():
     GPIO.cleanup()
 
 
-def getAngle():
+def getAngleSup():
     axes = adxl345.getAxes(True)
     try:
         angle = math.atan(axes['x'] / axes['z'])
     except ZeroDivisionError:
         angle = 0
-    return (angle, axes['x'], axes['y'], axes['z'])
+    return (angle)
+
+
+def getAngle():
+    lst = []
+    for i in range(19):
+        lst.append(getAngleSup())
+    lst.sort()
+    return (lst[len(lst) // 2])
 
 
 def setRef():
     global ref
     lst = []
-    for i in range(1000):
-        lst.append(getAngle()[0])
+    for i in range(1001):
+        lst.append(getAngleSup())
     ref = lst[len(lst) // 2]
 
 
 def loop():
-    setRef()
+    # setRef()
     old_error = 0
     E = 0
     while True:
-        angle,_,_,_ = getAngle()
+        angle = getAngle()
         error = ref - angle
         E = E + error
-        output = kp * error + kd * (error - old_error) / T + ki * E * T
-        output = output * 30
+        output = kp * error + kd * (old_error - error) / T + ki * E * T
+        # output = output*30
         if output > 0:
             # output = 0.5*output+50
-            output = min(output, 100)
-            if (output < 50):
+            output = min(output, 99)
+            if (output < 70):
                 output = 0
             motor(1, output)
         else:
             output = abs(output)
             # output = 0.5*output+50
-            output = min(output, 100)
-            if (output < 50):
+            output = min(output, 99)
+            if (output < 70):
                 output = 0
             motor(-1, output)
 
