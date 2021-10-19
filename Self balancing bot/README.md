@@ -39,8 +39,13 @@
    4) Tune kd - to reduce oscillation and smoothen dynamic response.
    *you can also experiment with only PD or PI controller*\
    We will calculate angle using ADXL345 in every iteration. It will be curr value. ref will be set initially. Median of angles taken initially over a large number of samples.(1000 samples == time req. in msec). Since we are using only accelerometer, and not gyroscope, a little bit of noise in system could be observed. ADXL measures angle in 3 axes. Basically inside ADXL, there are variable capacitors. Capacitors vary due to gravitational acceleration. ADXL345 can be operated using I2C protocol. So, before running program, make sure that I2C interfacing is on!!!\
+   
    <ul>*Usually we keep ADXL345 near axis of rotation to avoid noise in measurement.*</ul>
+   <ul><li>We are using accelerometer only and not gyroscope. Only accelerometer induces noise which here i am removing by taking many samples and taking median</li></ul>
+   
    We supply pulse either high or low through GPIO pins. PWM allows us to control for how much time we can keep pulse high and low. 100 pulse width means pulse high for all time. 50=high for half time.... We can also set frequency of this pulse. Usually we use 2000Hz pulse. So, if pulse is high for long time, current will be provided for long time. hence, motor will run faster. In on-off-on-off situation, motor resembles rotating at lower speed.
+   
+   <ul><li>I Connected CS pin to +5V instead of +3V because i was getting IO error in middle of process</li></ul>
    
    
 ## PWM and motor driver module:
@@ -49,11 +54,17 @@
    
    Base also matters a lot. Earlier, i used breadboard as base which was heavier hence bot couldnt speed much. Later i changed it with 
    
+   <ul><li>Dont forget to connect all grounds at one pin.</li></ul> 
+   
+   
    
     
 ## Tests:
+Very premitive test
 https://youtu.be/09PRFaCYIq0
 
+A bit more robust version. Sample rate is increased. And better tuning is done. Also, I changed max PWM from 100 to 99 cause i observed there is jerk at 99->100 transition. 
+https://youtu.be/g6OKTV2-NLo
 
 ## Circuit:
 
