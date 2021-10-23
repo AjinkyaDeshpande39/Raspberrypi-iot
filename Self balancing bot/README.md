@@ -69,7 +69,7 @@ https://youtu.be/09PRFaCYIq0
 A bit more robust version. Sample rate is increased. And better tuning is done.
 https://youtu.be/g6OKTV2-NLo
 
-Best PID tuning. 😃 Final Test. A good Ki results in such good robustness. kp=1300, kd-0.8, ki=900. Sampling rate = per milisecond. I have also done filtering to reduce noise by taking median over 20 samples.
+Best PID tuning. 😃 Final Test. A good Ki results in such good robustness. kp=1300, kd-0.8, ki=900. Sampling rate = per milisecond. I have also done filtering to reduce noise by taking median over 20 samples. Also, added code for setting reference angle at begining.
 https://youtu.be/_khguo-Qc-w
 
 ## Circuit:
