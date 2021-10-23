@@ -66,8 +66,11 @@
 Very premitive test
 https://youtu.be/09PRFaCYIq0
 
-A bit more robust version. Sample rate is increased. And better tuning is done. Also, I changed max PWM from 100 to 99 cause i observed there is jerk at 99->100 transition. 
+A bit more robust version. Sample rate is increased. And better tuning is done.
 https://youtu.be/g6OKTV2-NLo
+
+Best PID tuning. 😃 Final Test. A good Ki results in such good robustness. kp=1300, kd-0.8, ki=900. Sampling rate = per milisecond. I have also done filtering to reduce noise by taking median over 20 samples.
+https://youtu.be/_khguo-Qc-w
 
 ## Circuit:
 
