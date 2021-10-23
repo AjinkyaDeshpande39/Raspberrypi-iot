@@ -4,16 +4,26 @@
 
 ## Requirements:  🧰
 1) Raspberrypi4B\
-![](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/RPi.png)
+<p align="center">
+  <img width="200" src="https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/RPi.png">
+</p>
 
 2) BO motors ( 150RMP at least, 0.8N.cm. Gear motors provide good amount of torque which is very much necessary to carry load. BO motors are cheap and provide enough RPM and Torque for this purpose)\
-![](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/BO%20motor.png)
+<p align="center">
+  <img width="200" src="https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/BO%20motor.png">
+</p>
+
 
 3) ADXL345 (It is accelerometer that measures gravitational acceleration in x,y,z axes by which we will compute angle by which bot has tilted)\
-![](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/adxl345-triple-axis-accelerometer-india-800x800.jpg)
+<p align="center">
+  <img width="200" src="https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/adxl345-triple-axis-accelerometer-india-800x800.jpg">
+</p>
 
 4) L298N (you can use L293D also it works on till 1A whereas L298N works for 2A)\
-![](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/l298.png)
+<p align="center">
+  <img width="200" src="https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/Self%20balancing%20bot/Images%20and%20GIF/l298.png">
+</p>
+
 
 5) Jumpers (F-F since we will be connecting directly modules to RPi. If you are using ICs then you will need M-F, M-M jumpers as well as breadboard/PCB(soldering))
 
