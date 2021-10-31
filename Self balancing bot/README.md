@@ -63,9 +63,9 @@
    
 ## PWM and motor driver module:   
    Use motors of atleast 150rpm and sufficient amount of torque. I have tried using high rpm but less torque which wasnt able to bear the load of RPi itselt. Hence geared motor - bo motor is prefered. Since it is a small scale project, BO motors are sufficient. Motor driver module L298N works for motor till 35V and 2A. Earlier i have tried L293D ic which works for lower current motors, but found out that max speed acheived is high for L298N. One more observation was - If i set PWM lower(less than 60 at 1000Hz freq) motor wont rotate and driver makes hearable noise. If you increase freq, noise freq also increases and lower limit too(70-75-80 likewise). \
-   Motor drivers are necessary since they provide large current required to drive current, as well as direction and speed control is possible. Prefer L298N.\
-   
-   Base also matters a lot. Earlier, i used breadboard as base which was heavier hence bot couldnt speed much. Later i changed it with 
+   <ul><li>Motor drivers are necessary since they provide large current required to drive current, as well as direction and speed control is possible. Prefer L298N.</ul></li>
+   <ul><li>I have powered motor driver with an 10V open ckt adapter instead of using batteries. Batteries discharge within 1-2 days. Also, 6-9V was required for good rpm. Adapter is sustainable, constant source and i suggest to use it only.</ul></li>
+   <ul><li>Base also matters a lot. Earlier, i used breadboard as base which was heavier hence bot couldnt speed much. Later i changed it with thermocol</ul></li> 
    
    <ul><li>Dont forget to connect all grounds at one pin.</li></ul> 
    
