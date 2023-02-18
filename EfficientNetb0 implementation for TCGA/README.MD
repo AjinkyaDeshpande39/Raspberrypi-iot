@@ -105,6 +105,8 @@ $ rm torchvision-0.13.0a0+da3794e-cp39-cp39-linux_aarch64.whl
 This setup by firstly building wheel manually resolves the issue of "pip install...". I had downloaded 1.12.0 version of pytorch and 0.13.0 version of torchvision.
 After the required library installation, you are good to go for inplementation.
   
-Files uploaded here gui.py, classification.py, ModelFileEfficientNetb0 are required for GUI demonstration. infereceTime.py is written to calculate the averaged inference time over 15 images. Run the file gui.py by   ```python3 gui.py`` and you will observe a graphical user interface. You can upload files there and test the model. The demo is shown in video [here](!https://youtu.be/DNJapxg45_M)
+Files uploaded here gui.py, classification.py, ModelFileEfficientNetb0 are required for GUI demonstration. infereceTime.py is written to calculate the averaged inference time over 15 images. Run the file gui.py by   ```python3 gui.py`` and you will observe a graphical user interface. You can upload files there and test the model. The demo is shown in *video* [here](https://youtu.be/DNJapxg45_M)
   
-###Note that the model weights and image samples are not given due to matter of confidentiality.
+![Image](https://github.com/AjinkyaDeshpande39/Raspberrypi-iot/blob/master/EfficientNetb0%20implementation%20for%20TCGA/RPi%20GUI%20demo.jpg)
+
+###Note that the model weights and image samples are not published on github due to matter of confidentiality.
